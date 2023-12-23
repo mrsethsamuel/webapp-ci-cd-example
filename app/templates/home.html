@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa; /* Light gray background color */
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card-container {
+            max-width: 600px;
+        }
+
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .profile-link {
+            display: inline-block;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card card-container">
+        <div class="card-body">
+            <h1 class="card-title">Our Simple Web App</h1>
+            <p class="card-text lead">Explore user profiles:</p>
+            <div class="list-unstyled">
+                {% for user in users %}
+                    <a href="/profile/{{ user.username }}" class="btn btn-link profile-link">{{ user.first_name }} {{ user.last_name }}</a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
