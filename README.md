@@ -126,4 +126,3 @@ View the Running app on http://127.0.0.1:5000 and CTRL + C to stop.
 
 
 Enjoy using the web app with integrated CI/CD!
-
